@@ -328,7 +328,7 @@ following example.
 IF EXISTS(SELECT * FROM dbo.sysobjects WHERE ID = OBJECT_ID(N'Schema_Name.SP_Name') AND OBJECTPROPERTY(ID, N'IsProcedure') = 1)
 BEGIN
 	PRINT '[DROP]:[Dropping the stored procedure Schema_Name.SP_Name]';
-	DROP PROCEDURE dbo.sp_ProcessQueue;
+	DROP PROCEDURE dbo.SP_Name;
 END
 GO
 
