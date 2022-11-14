@@ -22,6 +22,8 @@
 
 <p>This document sets forth guidelines for the SQL Coding Standards for Barko Financial Services</p>
 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
+
 ---
 ## **<ins>Purpose</ins>**
 
@@ -48,6 +50,8 @@ degree possible, as modifications to that code are required. Note that
 implementation of error handling in only a subset of stored procedures
 will reduce the utility of a standardized approach.</p>
 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
+
 ---
 ## **<ins>Standard Categories</ins>**
 
@@ -69,6 +73,8 @@ Recommendations for implementing transactions are also contained in this
 section. Note that client handling of errors returned from the database
 is not addressed in this standards document, but is an important factor
 in the overall efficacy of a standard error handling approach.</p>
+
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
 ---
 ## **<ins>Object Naming Standards</ins>**
@@ -94,6 +100,8 @@ General naming guidelines:
     LkupCountryCode, @ErrNum, etc).
 -   Never name an object with a SQL Server reserved word. See Books
     Online, ‘Reserved Keywords’ section.
+    
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
 ---
 ## **<ins>Approved Object Name Abbreviations</ins>**
@@ -210,7 +218,7 @@ the columns indexed. By type, the definitions are as follows:
 
 **(open issue, should be clearly identify clustered keys)**
 
-**[Contents](https://github.com/CA-CST-SII/Software-Standards/blob/master/SQL%20Server%20Coding%20Standards.md#contents)** 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)**  
 
 ---
 ## **<ins>Naming Views, Check Constraints, Defaults, and Rules</ins>**
@@ -234,7 +242,7 @@ example, CHK\_ApplicationNameIsValid).
 | View             | v_ + name                       | v_AcctPersonProfile   | 
 | Check Constraint | CHK_ + name                     | CHK_ApplicationFeeMax | 
 
-**[Contents](https://github.com/CA-CST-SII/Software-Standards/blob/master/SQL%20Server%20Coding%20Standards.md#contents)** 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
 ---
 ## **<ins>Stored Procedure Names</ins>**
@@ -437,7 +445,7 @@ discernible, even a brief comment can help with future maintenance. Avoid code �
 15. When a modification is made to a stored procedure that has been deployed to production, a comment in the header of the procedure is required as well as describing what the mod was (i.e., ‘Added new parameter @pNewApp.’).
 The reason for the mod and the CR\# are also required (‘Added new parameter @pNewApp in order to filter result set by application; required for new OPS report; see CR \#505.’).
 
-**[Contents](https://github.com/CA-CST-SII/Software-Standards/blob/master/SQL%20Server%20Coding%20Standards.md#contents)** 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
 ---
 ### **<ins>Error Handling Standard</ins>**
@@ -467,4 +475,4 @@ appropriate than issuing raiserror commands, since there is no batch process to 
 
 **Transactions** Wrap units of work within explicit transactions. If a unit of work spans multiple stored procedures, use savepoints within the called stored procedures, to mimic nested transactions by committing / rolling back the work done within each procedure. Without savepoints, a rollback of an inner transaction rolls back the entire transaction, and the outer procedures will need to check @@trancount to properly handle that. SQL Server does not support nested transactions.
 
-**[Contents](https://github.com/CA-CST-SII/Software-Standards/blob/master/SQL%20Server%20Coding%20Standards.md#contents)** 
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
