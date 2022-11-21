@@ -133,6 +133,21 @@ abbreviated forms for inclusion.
 **[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
 ---
+## **<ins>Schema Names</ins>**
+
+Schemas are a list of logical structures of data. In other words, schemas are similar to 
+separate namespaces or containers used to handle database files. Please see DBA staff to suggest other
+abbreviated forms for inclusion:
+
+| Prefix   | Example                  | Definition                       | 
+|----------|--------------------------|----------------------------------| 
+| log      | log.MyTable              | Log Related tables data          | 
+| mail     | mail.MyTable             | Mail Related tables & processses | 
+| procq    | procq.MyTable            | Processing Queue                 | 
+
+**[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
+
+---
 ## **<ins>Table Names</ins>**
 
 Data tables are defined as tables containing data specific to the
@@ -140,10 +155,11 @@ business of the application. Their names may include a prefix, to group
 tables of similar business purpose. The set of approved data table name
 prefixes is defined below (TBD):
 
-| Prefix | Definition               | 
-|--------|--------------------------| 
-| Lkup   | Lookup data              | 
-| Imp    | “Import” or staging data | 
+| Prefix | Example                  | Definition               | 
+|--------|--------------------------|--------------------------| 
+| Lkup   | Lkup_MyTable             | Lookup data              | 
+| Imp    | Imp_ImportFinanceData    | “Import” or staging data | 
+| Log    | Log_AuditTable           | “Log” or audit data      | 
 
 
 Non-data tables are used for more generic purpose: error handling,
@@ -163,6 +179,7 @@ case, with no underscore\]
 | Persistent Work Tables                            | Tables to support interim work steps                                    | Application Group Name  where Appropriate                                 | WORK                                                                    |                                          |                             | 
 | Staging Tables (For import/export)                | Tables used to hold imported and exported data                          | Application Group Name where Appropriate | (no suffix; use Inp prefix) | 
 | Backup Tables                                     | Tables used to back up other tables                                     | Application Group Name where Appropriate | BKUP                        | 
+
 
 **[Contents](https://github.com/WimpieBarko/SQL/edit/main/README.md#contents)** 
 
