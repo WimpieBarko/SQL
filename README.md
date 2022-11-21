@@ -195,6 +195,7 @@ across all agencies. By Type the definitions are:
 | Foreign Key         | fki +  column name + ID         | fkiRegionID           | 
 | Text                | txt +  column name              | txtDescription        | 
 | Integer             | int +  column name              | intCounter            | 
+| Decimal             | dec +  column name              | decCounter            | 
 | Date                | dte +  column name              | dteCreatedDate        | 
 | Boolean/Decision    | bln +  column name              | blnVerified           | 
 
